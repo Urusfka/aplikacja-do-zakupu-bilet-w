@@ -46,7 +46,7 @@ namespace TIcketsShop
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");//test
+                    pattern: "{controller=Home}/{action=Index}/{id?}");//testt
             });
         }
     }
