@@ -1,6 +1,6 @@
 using System;
 
-namespace TIcketsShop.Models
+namespace TicketsShop.Models
 {
     public class ErrorViewModel
     {
