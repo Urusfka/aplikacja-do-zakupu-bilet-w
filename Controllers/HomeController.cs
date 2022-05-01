@@ -6,6 +6,7 @@ namespace TicketsShop.Controllers
     {
         public IActionResult Index()
         {
+            //DB
             return View();
         }
     }
