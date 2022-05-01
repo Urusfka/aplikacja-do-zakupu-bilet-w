@@ -2,11 +2,11 @@
 
 namespace TicketsShop.Controllers
 {
-    public class HomeController : Controller
+    public class AboutController : Controller
     {
-        public IActionResult Index()
+        [ActionName("Performance")]
+        public IActionResult GetPerformancePage()
         {
-            //DB
             return View();
         }
     }

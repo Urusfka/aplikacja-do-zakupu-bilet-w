@@ -1,0 +1,21 @@
+﻿<div>
+	<h1>@ViewData["FilterName"]</h1>
+</div>
+
+@{
+	for (int i = 0; i < 4; i++)
+	{
+		<div>
+			<img src="~/Images/1.jpg" width="100px" height="100px" />
+			<p>Performance Name</p>
+			<p>Date | Place</p>
+			<p>Price</p>
+			<button  style="width: 100px; height: 40px">
+				<a asp-controller="About" asp-action="Performance">Bilety</a>
+			</button>
+		</div>
+		<div style="height: 100px">
+
+		</div>
+	}
+}

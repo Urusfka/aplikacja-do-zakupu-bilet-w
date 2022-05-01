@@ -4,17 +4,19 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - TicketsShop</title>
-    <link rel="stylesheet" href="Styles\footer.css">
+    <link rel="stylesheet" href="~/Styles/footer.css" />
 </head>
-<body>
+<body style="margin: 0">
 <div class="header">
-    <ul class="hr">
-        <li><h1 class="logo">Eventim ✦</h1></li>
-        <li><h4>Wszystkie <br/>wydarzenia ▼</h4></li>
-        <li><h4>Wszystkie <br/>miasta ▼</h4></li>
-    </ul>
+	<ul class="hr">
+		<li><h1 class="logo">Eventim ✦</h1></li>
+		<li><h4>Wszystkie <br/>wydarzenia ▼</h4></li>
+		<li><h4>Wszystkie <br/>miasta ▼</h4></li>
+	</ul>
 </div>
-<div class="conteiner">@RenderBody()</div>
+<div class="container">
+	@RenderBody()
+</div>
 <div class="footer">
     <ul class="hr">
     <li>
