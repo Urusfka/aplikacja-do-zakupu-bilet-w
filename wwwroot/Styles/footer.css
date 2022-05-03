@@ -6,18 +6,20 @@
     flex-direction: column;
     height: 80px;
 }
-.container {
-    height: 1654px;
-}
 .footer {
-    background-color: #DFDFDF;
-    display: block;
-    left: 0;
-    position: relative;
-    height: 175px;
-    width: 100%;
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+    margin-top: 20px;
 }
+.floating-box {
+    display: inline-block;
 
+    margin: 10px;
+    background-color: brown;
+    width: 50px;
+    height: 50px;
+}
 ul.hr {
     margin: -20px;
     padding: 0px;
