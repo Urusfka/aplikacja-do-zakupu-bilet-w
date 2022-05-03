@@ -8,9 +8,7 @@
 }
 .footer {
     padding: 20px;
-    text-align: center;
     background: #ddd;
-    margin-top: 20px;
 }
 .floating-box {
     display: inline-block;
@@ -24,34 +22,46 @@ ul.hr {
     margin: -20px;
     padding: 0px;
 }
-
 ul.hr li {
     display: inline-block;
     padding: 5px; 
 }
+.leftimg {
+    float: left; 
+    margin: 7px 7px 7px 0; 
+}
+#layer1 {
+    height: 132px;
+    width: 1170px;
+    margin: 20px;
+    padding: 20px;
+    display: inline-block;
+    border: 1px solid black;
+}
+.button {
+    background-color: #AFE2FF;
+    border: none;
+    padding: 15px 25px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 200px;
+    margin-top: 60px;
+}
 
-
+    .button:hover {
+        background-color: #7ED1FF;
+    }
 
 .logo {
     padding-top: 28px;
     padding-left: 306px;
-} 
+}
+p {
+    text-align: justify;
+    font-family: 'Roboto', sans-serif;
+}
 h1 {
     font-size: 25px;
     font-family: 'Roboto', sans-serif;
-}
-h3 {
-    padding-left: 250px;
-    font-size: 15px;
-    font-family: 'Roboto', sans-serif;
-}
-h4 {
-    padding-left: 250px;
-    font-size: 12px;
-    font-family: 'Roboto', sans-serif;
-}
-h5 {
-    font-family: 'Roboto', sans-serif;
-    padding-left: 700px;
-    font-size: 10px;
 }
