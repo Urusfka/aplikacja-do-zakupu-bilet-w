@@ -42,11 +42,11 @@ ul.hr li {
     background-color: #AFE2FF;
     border: none;
     padding: 15px 25px;
-    text-align: center;
     font-size: 16px;
     cursor: pointer;
-    margin-left: 200px;
-    margin-top: 60px;
+}
+.text-but {
+    text-align: right;
 }
 
     .button:hover {
