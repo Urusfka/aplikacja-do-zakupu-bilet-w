@@ -1,0 +1,57 @@
+﻿<style>
+	ul {
+		list-style-type: none;
+		padding-left: 0;
+	}
+
+	p {
+		margin: 0 0;
+	}
+
+	.line {
+		display: inline-block;
+	}
+</style>
+@{
+	<h1>@ViewData["FilterName"]</h1>
+	for (int i = 0; i < 5; i++)
+	{
+		<ul style="text-align: center">
+			<li class="line" style="vertical-align: top">
+				<img alt="image" src="~/Images/1.jpg" height="200" width="200"/>
+			</li>
+			<li class="line">
+				<div>
+					<div>
+						<p>BAND NAME</p>
+					</div>
+					<div>
+						<ul>
+							<li class="line">
+								<p style="text-align: left">07.08.2020</p>
+							</li>
+							<li class="line">
+								<p style="text-align: center">|</p>
+							</li>
+							<li class="line">
+								<p>WARSZAWA</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</li>
+			<li class="line" style="vertical-align: bottom">
+				<ul>
+					<li>
+						<p>PRICE</p>
+					</li>
+					<li>
+						<button>Bilety</button>
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<br/>
+	}
+	
+}

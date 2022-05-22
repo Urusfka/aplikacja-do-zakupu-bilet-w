@@ -2,7 +2,7 @@
 
 namespace TicketsShop.Controllers
 {
-    public class FilterController : Controller
+    public class SearchController : Controller
     {
         public IActionResult Index()
         {
