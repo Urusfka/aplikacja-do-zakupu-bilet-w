@@ -1,26 +1,14 @@
-﻿<style>
-	ul {
-		list-style-type: none;
-		padding-left: 0;
-	}
-
-	p {
-		margin: 0 0;
-	}
-
-	.line {
-		display: inline-block;
-	}
-</style>
+﻿
 @{
 	<h1>@ViewData["FilterName"]</h1>
 	for (int i = 0; i < 5; i++)
 	{
-		<ul style="text-align: center">
+	    <ul>
+            <hr>
 			<li class="line" style="vertical-align: top">
 				<img alt="image" src="~/Images/1.jpg" height="200" width="200"/>
 			</li>
-			<li class="line">
+			<li class="line" style="width: 70%">
 				<div>
 					<div>
 						<p>BAND NAME</p>
@@ -45,10 +33,10 @@
 					<li>
 						<p>PRICE</p>
 					</li>
-					<li>
-						<button>Bilety</button>
-					</li>
-				</ul>
+                    <li>
+                        <button>BILETY</button>
+                    </li>
+                </ul>
 			</li>
 		</ul>
 		<br/>

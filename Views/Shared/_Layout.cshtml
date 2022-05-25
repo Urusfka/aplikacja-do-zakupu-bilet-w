@@ -4,28 +4,31 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - TicketsShop</title>
-    <link rel="stylesheet" href="~/Styles/footer.css" />
+    <link rel="stylesheet" href="~/Styles/footer.css" / >
 </head>
 <body style="margin: 0">
-<div class="header">
-	<ul class="hr">
-		<li><h1 class="logo">Eventim ✦</h1></li>
-		<li><h1 style="padding-left: 250px;font-size: 12px;">Wszystkie <br/>wydarzenia ▼</h1></li>
-		<li><h1 style="padding-left: 250px;font-size: 12px;">Wszystkie <br/>miasta ▼</h1></li>
-	</ul>
+<div class="navbar">
+    <a href="#home">Home</a>
+    <div class="dropdown">
+        <button class="dropbtn">Wszystkie wydarzenia ▼</button>
+        <div class="dropdown-content">
+            <a href="#">Koncert</a>
+            <a href="#">Teatr</a>
+        </div>
+    </div> 
+  
+    <div class="dropdown">
+        <button class="dropbtn">Wszystkie miasta ▼</button>
+        <div class="dropdown-content">
+            <a href="#">Warszawa</a>
+            <a href="#">Lublin</a>
+            <a href="#">Katowice</a>
+        </div>
+    </div> 
 </div>
 <div style="padding-left: 300px; padding-right: 300px; padding-top: 40px">
 	@RenderBody()
 </div>
-<div class="footer">
-    <ul class="hr">
-        <li><h1 class="logo">Eventim ✦</h1></li>
-        <li><h1 style="padding-left: 250px;font-size: 15px;">Kontakt:
-        <br> +48 22 591 8383 | info@eventim.pl</h1></li>
-        <h1 style="padding-left: 700px; font-size: 10px;">
-        Poniedziałek - Piątek: 10:00 - 18:00
-        (Opłata za połączenie zgodna z cennikiem operatora)</h1>
-    </ul>
-</div>
+<div class="footer"><h5 style="text-align: center">Eventim</h5></div>
 </body>
 </html>

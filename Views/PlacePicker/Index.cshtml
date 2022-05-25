@@ -1,13 +1,21 @@
-﻿@{
+﻿
+@{
+    <p>Liczba biletów: 1</p>
+    <p>Miejsce:</p>
 	for (int i = 0; i < 2; i++)
 	{
-		<ul>
-			@{
-				for (int j = 0; j < 5; j++)
-				{
-					<li style="display: inline"><button>@j </button></li>
-				}
-			}
-		</ul>
+	    <ul>
+            @{
+                for (int j = 0; j < 5; j++)
+                {
+                    <li style="display: inline"><button class="button">@j </button></li>
+                }
+            }
+        </ul>
+
 	}
+    <div style="text-align: right;"><li class="line">
+            <button>Kup bilet PRICE zł</button>
+            </li>
+    </div>
 }
