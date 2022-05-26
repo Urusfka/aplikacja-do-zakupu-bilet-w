@@ -14,9 +14,9 @@ namespace TicketsShop.Controllers
             _db = db;
         }
 
-        public IActionResult GetAboutPage(Guid id)
+        public IActionResult GetAboutPage(string name)
         {
-            var @events = _db.Events.Include(x=>x.City).Where(e => e.Id == id).ToList();
+            var @events = _db.Events.Where(e => e.Name == name).Include(x => x.City).ToList();
 
             return View("About", @events);
         }
