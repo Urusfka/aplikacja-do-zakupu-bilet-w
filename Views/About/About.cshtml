@@ -1,0 +1,78 @@
+﻿@model List<Event>
+<style>
+	ul {
+		list-style-type: none;
+		padding-left: 0;
+	}
+
+	p {
+		margin: 0 0;
+	}
+
+	.line {
+		display: inline-block;
+	}
+</style>
+
+<h1 style="font-size: 20px;">Informacje o wydarzeniu</h1> <hr/>
+<p><img src=@Model[0].ImagePath height="200" width="200" class="leftimg"/>
+    @Model[0].Description</p>
+    <hr/>
+<h2 style="padding-top: 30px; padding-left: 20px;">@Model.Count Wydarzenia</h2>
+
+@{
+	for (int i = 0; i < Model.Count; i++)
+	{
+	    <div style="position: relative;">
+            <hr/>
+            <ul>
+                <li class="line">
+                    <ul>
+                        <li>
+                            <p>@Model[i].EventTime.Day</p>
+                        </li>
+                        <li>
+                            <p>@Model[i].EventTime.Month @Model[i].EventTime.Year</p>
+                        </li>
+                        <li>
+                            <p>@Model[i].EventTime.Hour.ToString("00:00")</p>
+                        </li>
+                    </ul>
+                </li>
+                <li class="line">
+                    <div style="display: inline-flex; width: 50px; height: 50px;">
+	                    <li><hr style="margin: 0px 0px 0px 12.5px;"/></li>
+                    </div>
+                </li>
+                <li class="line">
+                    <ul>
+                        <li>
+                            <p>@Model[i].City.Name</p>
+                        </li>
+                        <li>
+                            <p>@Model[i].Name</p>
+                        </li>
+                        <li>
+                            <p>@Model[i].PlaceName</p>
+                        </li>
+                    </ul>
+                </li>
+                <li class="line">
+                    <ul>
+                        <li>
+                            <p>@Model[i].Price $</p>
+                        </li>
+                        <li>
+
+	                        @{
+		                        var i1 = i;
+	                        }
+	                        <a asp-controller="PlacePicker" asp-action="GetPlaces" asp-route-id=@Model[i1].Id><button style="position: absolute; top: 50%; right: 0;">BILETY</button></a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+	}
+}

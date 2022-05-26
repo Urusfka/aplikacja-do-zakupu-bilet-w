@@ -1,0 +1,58 @@
+﻿@model List<Event>
+<style>
+	.img-with-text {
+		text-align: justify;
+		width: 200px;
+	}
+
+	.img-with-text img {
+		display: block;
+		margin: 0 auto;
+	}
+</style>
+
+<H1>NOWOŚCI</H1>
+<ul style="list-style-type: none; text-align: center">
+	@{
+		foreach(var item in Model.OrderByDescending(x=>x.CreationTime).Take(5))
+		{
+			<li style="display: inline-block">
+				<div class="img-with-text">
+					<a asp-controller="About" asp-action="GetAboutPage" asp-route-id=@item.Id><img alt="image" src=@item.ImagePath height="200" width="200"/></a>
+					<p>@item.Name</p>
+				</div>
+			</li>
+		}
+	}
+</ul>
+<H1>POPULARNE</H1>
+<ul style="list-style-type: none; text-align: center">
+	@{
+		foreach(var item in Model.Take(5))
+		{
+			<li style="display: inline-block">
+				<div class="img-with-text">
+					<a asp-controller="About" asp-action="GetAboutPage" asp-route-id=@item.Id><img alt="image" src=@item.ImagePath height="200" width="200"/></a>
+					<p>@item.Name</p>
+				</div>
+			</li>
+		}
+	}
+</ul>
+<H1>POLECANE</H1>
+<ul style="list-style-type: none; text-align: center">
+	@{
+		foreach(var item in Model.Take(5))
+		{
+			<li style="display: inline-block">
+				<div class="img-with-text">
+					<a asp-controller="About" asp-action="GetAboutPage" asp-route-id=@item.Id><img alt="image" src=@item.ImagePath height="200" width="200"/></a>
+					<p>@item.Name</p>
+				</div>
+			</li>
+		}
+	}
+</ul>
+<br/>
+<br/>
+<br/>

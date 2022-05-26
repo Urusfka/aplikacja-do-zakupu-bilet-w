@@ -1,28 +1,28 @@
-﻿
+﻿@model List<Event>
 @{
-	<h1>@ViewData["FilterName"]</h1>
-	for (int i = 0; i < 5; i++)
+	<h1>@ViewData["SearchName"]</h1>
+	foreach(var item in Model)
 	{
 	    <ul>
             <hr>
 			<li class="line" style="vertical-align: top">
-				<img alt="image" src="~/Images/1.jpg" height="200" width="200"/>
+				<img alt="image" src=@item.ImagePath height="200" width="200"/>
 			</li>
 			<li class="line" style="width: 70%">
 				<div>
 					<div>
-						<p>BAND NAME</p>
+						<p>@item.Name</p>
 					</div>
 					<div>
 						<ul>
 							<li class="line">
-								<p style="text-align: left">07.08.2020</p>
+								<p style="text-align: left">@item.EventTime</p>
 							</li>
 							<li class="line">
 								<p style="text-align: center">|</p>
 							</li>
 							<li class="line">
-								<p>WARSZAWA</p>
+								<p>@item.City.Name</p>
 							</li>
 						</ul>
 					</div>
@@ -33,9 +33,9 @@
 					<li>
 						<p>PRICE</p>
 					</li>
-                    <li>
-                        <button>BILETY</button>
-                    </li>
+					<li>
+						<a asp-controller="PlacePicker" asp-action="GetPlaces" asp-route-id=@item.Id><button type="submit">BILETY</button></a>
+					</li>
                 </ul>
 			</li>
 		</ul>

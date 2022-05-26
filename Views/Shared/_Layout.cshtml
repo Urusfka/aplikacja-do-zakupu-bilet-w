@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - TicketsShop</title>
-    <link rel="stylesheet" href="~/Styles/footer.css" / >
+    <link rel="stylesheet" href="~/Styles/footer.css" />
 </head>
 <body style="margin: 0">
 <div class="navbar">
@@ -12,17 +12,17 @@
     <div class="dropdown">
         <button class="dropbtn">Wszystkie wydarzenia ▼</button>
         <div class="dropdown-content">
-            <a href="#">Koncert</a>
-            <a href="#">Teatr</a>
+            <a asp-controller="Search" asp-action="ByType" asp-route-type="Koncert">Koncert</a>
+            <a asp-controller="Search" asp-action="ByType" asp-route-type="Teatr">Teatr</a>
         </div>
     </div> 
   
     <div class="dropdown">
         <button class="dropbtn">Wszystkie miasta ▼</button>
         <div class="dropdown-content">
-            <a href="#">Warszawa</a>
-            <a href="#">Lublin</a>
-            <a href="#">Katowice</a>
+            <a asp-controller="Search" asp-action="ByCity" asp-route-name="Warszawa">Warszawa</a>
+            <a asp-controller="Search" asp-action="ByCity" asp-route-name="Lublin">Lublin</a>
+            <a asp-controller="Search" asp-action="ByCity" asp-route-name="Katowice">Katowice</a>
         </div>
     </div> 
 </div>

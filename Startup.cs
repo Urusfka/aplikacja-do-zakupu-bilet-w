@@ -3,10 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using TicketsShop.Models;
 
 namespace TicketsShop
 {
@@ -21,6 +18,8 @@ namespace TicketsShop
 
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<ApplicationContext>();
+
             services.AddControllersWithViews();
         }
 
