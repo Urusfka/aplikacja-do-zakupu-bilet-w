@@ -1,12 +1,12 @@
 ﻿@model Event
 @{
-    <div style="text-align: center"><form>
+    <div style="text-align: center">
 		<h1>Blik</h1>
 		<p>Wprowadż kod blik<br>
 				<input type="text" placeholder="0000-0000" name="kod" required maxlength="8">
 				<br>
 				</p>
         <a asp-controller="BuyPage" asp-action="Status" asp-route-id=@Model.Id><button>Ok</button></a>
-		</form>
+		
 	</div>
 }

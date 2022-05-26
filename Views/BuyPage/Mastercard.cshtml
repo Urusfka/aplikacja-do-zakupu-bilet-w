@@ -1,7 +1,6 @@
 ﻿@model Event
 @{    
     <div>
-        <form>
         <h1>Mastercard lub Visa</h1>
         <p>Platność dla Eventim<br>
             Kwota @Model.Price zł <br>
@@ -12,5 +11,5 @@
             <br/> CVV2/CVC2: <input type="text" placeholder="0000" name="numer" required maxlength="4">
         </p>
         <a asp-controller="BuyPage" asp-action="Status" asp-route-id=@Model.Id><button>Ok</button></a>
-   </form> </div>
+   </div>
 }
