@@ -72,7 +72,7 @@ namespace TicketsShop.Models
                 CityId = warszawa.Id,
                 CreationTime = DateTime.Now.Add(TimeSpan.FromDays(2)),
                 Description = "Przyłapany na zdradzie mąż potrafi wznieść się na wyżyny kreatywności! Sztuka Jeana Poireta “Alibi od zaraz” jest tego niezbitym dowodem. Michel, zaprasza do domu piękną młodą dziewczynę.Gdy powoli wciela w życie swoje marzenia o romansie, w drzwiach staje jego żona Sophie!Zdezorientowany i przerażony wizją rozwodu z dobrze sytuowaną małżonką, potrzebuje porządnego alibi. Na poczekaniu wymyśla niedorzeczną historię i wciąga niedoszłą kochankę do wspólnego odgrywania absolutnie nieprzemyślanej farsy…Jakie alibi będzie najbardziej wiarygodne? W co uwierzy żona? Scenariusza komicznej intrygi nie zna nikt! Nawet sam autor!",
-                EventTime = DateTime.Parse("TimeSpan.FromDays(2)"),
+                EventTime = DateTime.Parse("03 06 2022 19:30"),
                 Type = teatr,
                 ImagePath = "/Images/02.png",
                 Price = 142,
