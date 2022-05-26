@@ -1,5 +1,7 @@
-﻿using System;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using System;
+using System.Linq;
 using TicketsShop.Models;
 
 namespace TicketsShop.Controllers
@@ -15,16 +17,33 @@ namespace TicketsShop.Controllers
 
         public IActionResult Index(Guid id)
         {
-            return View();
+            var @event = _db.Events.Include(x => x.City).FirstOrDefault(x => x.Id == id);
+
+            return View(@event);
         }
-        public IActionResult Blik()
+        public IActionResult Blik(Guid id)
         {
-            return View("Blik");
+            var @event = _db.Events.Include(x => x.City).FirstOrDefault(x => x.Id == id);
+
+            return View("Blik", @event);
         }
 
-        public IActionResult Mastercard()
+        public IActionResult Mastercard(Guid id)
         {
-            return View("Mastercard");
+            var @event = _db.Events.Include(x => x.City).FirstOrDefault(x => x.Id == id);
+
+            return View("Mastercard", @event);
+        }
+
+        public IActionResult Status(Guid id)
+        {
+            var @event = _db.Events.Include(x => x.City).FirstOrDefault(x => x.Id == id);
+
+            @event.TicketsNumber--;
+
+            _db.SaveChanges();
+
+            return View("Status", @event);
         }
     }
 }
