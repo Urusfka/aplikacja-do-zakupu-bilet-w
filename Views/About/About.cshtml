@@ -17,7 +17,11 @@
 <h1 style="font-size: 20px;">Informacje o wydarzeniu</h1> <hr/>
 <p><img src=@Model[0].ImagePath height="200" width="200" class="leftimg"/>
     @Model[0].Description</p>
-    <hr/>
+<hr/>
+<br/>
+<br/>
+<br/>
+<br/>
 <h2 style="padding-top: 30px; padding-left: 20px;">@Model.Count Wydarzenia</h2>
 
 @{
@@ -35,16 +39,16 @@
                             <p>@Model[i].EventTime.Month @Model[i].EventTime.Year</p>
                         </li>
                         <li>
-                            <p>@Model[i].EventTime.Hour.ToString("00:00")</p>
+                            <p>@Model[i].EventTime.Hour:@Model[i].EventTime.Minute.ToString("00")</p>
                         </li>
                     </ul>
                 </li>
                 <li class="line">
                     <div style="display: inline-flex; width: 50px; height: 50px;">
-	                    <li><hr style="margin: 0px 0px 0px 12.5px;"/></li>
+	                    <hr style="margin: 0px 0px 0px 12.5px;"/>
                     </div>
                 </li>
-                <li class="line">
+                <li class="line" style="width: 80%">
                     <ul>
                         <li>
                             <p>@Model[i].City.Name</p>
@@ -60,14 +64,14 @@
                 <li class="line">
                     <ul>
                         <li>
-                            <p>@Model[i].Price $</p>
+                            <p>@Model[i].Price PLN</p>
                         </li>
                         <li>
 
 	                        @{
 		                        var i1 = i;
 	                        }
-	                        <a asp-controller="PlacePicker" asp-action="GetPlaces" asp-route-id=@Model[i1].Id><button style="position: absolute; top: 50%; right: 0;">BILETY</button></a>
+	                        <a asp-controller="PlacePicker" asp-action="GetPlaces" asp-route-id=@Model[i1].Id><button>BILETY</button></a>
                         </li>
                     </ul>
                 </li>
