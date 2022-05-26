@@ -85,10 +85,12 @@ namespace TicketsShop.Models
                 Name = "Kiedy Kota Niema",
                 CityId = poznan.Id,
                 CreationTime = DateTime.Now.Add(TimeSpan.FromDays(2)),
-                Description = "None",
-                EventTime = DateTime.Now.Add(TimeSpan.FromDays(2)),
+                Description = "Kiedy kota nie ma... istnieje szansa, że pojawi się w najmniej oczekiwanym momencie! A wtedy bieg komicznych wydarzeń w tej znakomitej brytyjskiej komedii sytuacyjnej, może nabrać zawrotnego tempa, a rozbawienie Widzów całkowicie wymknąć się spod kontroli. Podróż poślubna do Saint Tropez? Tak! Ale w dwudziestą rocznicę ślubu??? Jak poradzą sobie z wzajemnymi uszczypliwościami dwa zabawne angielskie małżeństwa z 20-letnim stażem? Jak rozbudzić dziką namiętność w mężu fajtłapie? Jak ów próbuje dotrzymać kroku szwagrowi seksoholikowi? Jak zaimponować zmanierowanej zamożnej siostrze i nie zabić jej wędzonym łososiem? Oraz czy szczotka sedesowa z wizerunkiem pary królewskiej może pomóc w samobójstwie pięknej 20-latce? - odpowiedzi mogą być abstrakcyjnie zaskakujące! Jedyne przewidywalne tego wieczoru, to ponad 2 godziny dobrego dowcipu, humoru i śmiechu do łez!",
+                EventTime = DateTime.Parse("10 09 2022 19:00"),
                 Type = teatr,
-                ImagePath = "/Images/1.jpg"
+                ImagePath = "/Images/03.png",
+                Price = 131,
+                PlaceName = "Teatr Capitol"
             };
 
             var psa = new Event
