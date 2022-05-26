@@ -15,6 +15,6 @@
 
 	}
     <div style="text-align: right;">
-            <button>Kup bilet @Model.Price $</button>
+            <a asp-controller="BuyPage" asp-action="Index" asp-route-id=@Model.Id><button>Kup bilet @Model.Price $</button></a>
     </div>
 }
