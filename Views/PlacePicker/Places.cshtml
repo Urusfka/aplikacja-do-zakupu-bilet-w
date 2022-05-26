@@ -1,4 +1,5 @@
-﻿@model Event
+﻿
+@model Event
 <p>Liczba biletów: @Model.TicketsNumber</p>
 <p>Miejsce:</p>
 @{
@@ -8,7 +9,8 @@
 		    @{
                 for (int i = 0; i < 5; i++)
                 {
-                    <li style="display: inline"><button class="button">@(i+row*5+1) </button></li>
+                    <li style="display: inline"><button>@(i+row*5+1) </button></li>
+
                 }
             }
         </ul>

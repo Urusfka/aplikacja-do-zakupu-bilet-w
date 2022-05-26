@@ -12,13 +12,13 @@ namespace TicketsShop.Models
         public ApplicationContext(DbContextOptions<ApplicationContext> options)
             : base(options)
         {
-            Database.EnsureDeleted();
+            //Database.EnsureDeleted();
             Database.EnsureCreated();
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlite("Data Source=auction.db");
+            optionsBuilder.UseSqlite("Data Source=events.db");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
