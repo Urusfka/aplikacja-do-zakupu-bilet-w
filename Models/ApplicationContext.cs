@@ -55,15 +55,17 @@ namespace TicketsShop.Models
                 Price = 249
             };
 
-            var arcticMonkeys = new Event
+            var deanLewis = new Event
             {
-                Name = "Arctic Monkeys",
-                CityId = warszawa.Id,
+                Name = "Dean Lewis",
+                CityId = lublin.Id,
                 CreationTime = DateTime.Now.Add(TimeSpan.FromDays(1)),
-                Description = "None",
-                EventTime = DateTime.Now.Add(TimeSpan.FromDays(1)),
+                Description = "Dean Lewis, autor multiplatynowego hitu „Be Alright”, wystąpi jesienią w Progresji!Złote dziecko australijskiego popu, Dean Lewis to prawdziwy kolekcjoner imponujących osiągnięć - 5, 6 miliarda streamów i ponad 1, 3 sprzedanych wydawnictw, milion obserwujących na Youtube i 830 tysięcy followersów na Tik Toku.Artysta wystąpi w warszawskiej Progresji 1 października.Jego najnowszy singiel, “Falling Up” do tej pory zaliczył ponad 45 milionów streamów na całym świecie, zyskując w Australii status Złotej Płyty. W 2019 roku Lewis został ogłoszony przez Apple jako “Up Next Artist”, wyprzedając tournee w Australii i USA. Niedługo później ukazał się jego debiutancki album „A Place We Knew”, który przyniósł takie hity jak „Waves”, „Be Alright”, „7 Minutes” i „Stay Awake”. Płyta ma status platyny w Australii, złota w USA, srebra w UK oraz platyny w ponad ośmiu innych krajach. „Be Alright”, które okazało się przełomem w karierze artysty, ma niemal 5 miliardów streamów na całym świecie(status platyny w ponad 23 krajach - w samej Australii 11 - stokrotną!).",
+                EventTime = DateTime.Parse("01 11 2022 20:00"),
                 Type = koncert,
-                ImagePath = "/Images/1.jpg"
+                ImagePath = "/Images/05.png",
+                Price = 110,
+                PlaceName = "Progresja"
             };
 
             var alibi = new Event
@@ -93,19 +95,58 @@ namespace TicketsShop.Models
                 PlaceName = "Teatr Capitol"
             };
 
-            var psa = new Event
+            var pentatonix = new Event
             {
-                Name = "Kiedy Psa Niema",
+                Name = "Pentatonix",
+                CityId = warszawa.Id,
+                CreationTime = DateTime.Now.Add(TimeSpan.FromDays(2)),
+                Description = "Pentatonix, czyli bez wątpienia najsłynniejszy na świecie zespół acapella, słusznie owiany legendarną sławą zmuszony został do ponownego przeniesienia swojej światowej trasy koncertowej. Tym samym przesunięty został również termin polskiego występu grupy, która według nowego kalendarza zagra w warszawskiej hali Torwar 15 maja 2023 roku.Chociaż fani Pentatonix muszą wykazać się nie lada cierpliwością,to w tym wypadku bez wątpienia jest na co czekać.Pentatonix to prawdziwe wokalne mistrzostwo świata.Piątka artystów tworzących muzykę łączącą niemal wszystkie gatunki świata rozkochała w sobie setki tysięcy ludzi za sprawą swoich nietuzinkowych głosów.Poza tworzeniem oryginalnych utworów, Pentatonix słyną z aranżacji popowych przebojów i popularnych piosenek świątecznych, które każdego roku biją rekordy popularności. Amerykanie zdobyli już 3 nagrody Grammy, a ich albumy stale goszczą na liście Billboard(dziesięć płyt sięgnęło TOP10 tego zestawienia, w tym dwa zdobyły pierwsze miejsce) i wielokrotnie pokrywały się multi - platyną, platyną i złotem.Ich kanał na YouTube subskrybuje ponad 17 milionów osób, a ich filmy zostały obejrzane już ponad 4 miliardy razy.Te liczby mówią same za siebie – Pentatonix to potężna marka, a ich występ na żywo będzie wydarzeniem, które na lata pozostanie w pamięci słuchaczy.",
+                EventTime = DateTime.Parse("15 05 2023 19:00"),
+                Type = koncert,
+                ImagePath = "/Images/04.png",
+                Price = 225,
+                PlaceName = "COS Torwar"
+            };
+            var kochanePien = new Event
+            {
+                Name = "Kochane pieniążki",
                 CityId = poznan.Id,
                 CreationTime = DateTime.Now.Add(TimeSpan.FromDays(2)),
-                Description = "None",
-                EventTime = DateTime.Now.Add(TimeSpan.FromDays(2)),
+                Description =
+                    "Co byś zrobił, gdybyś przez pomyłkę wszedł w posiadanie teczki z gigantyczną sumą pieniędzy? Szukałbyś właściciela czy szalejąc ze szczęścia zatrzymałbyś ją dla siebie? Trudny wybór… Bo przecież pieniądze nie spadają z nieba i taka szansa nie zdarza się co dzień. Henry, bohater kryminalnej farsy „Kochane pieniążki” podejmuje więc szybką decyzję. W końcu właśnie w jego urodziny otrzymuje ten wyjątkowy prezent od losu i żal z niego nie skorzystać. Pędzi do domu ile tchu, ściskając go w rękach. Czas to pieniądz, więc od razu wciela w życie swój misterny plan!Żona patrzy na niego z przerażeniem,próbując odwieść go od szalonego pomysłu… Gdy małżonkowie starają się dojść do porozumienia, niespodziewani goście tylko komplikują sytuację.Żądni sensacji i chciwi przyjaciele, skorumpowany glina, niezbyt rozgarnięty inspektor, bezczelny taksówkarz, a wszystkim po piętach depcze ktoś z kim lepiej nie zadzierać… I wtedy zaczyna się prawdziwa akcja… Zawrotne tempo, niespodziewane wydarzenia, komiczne sytuacje i przezabawne dialogi.",
+                EventTime = DateTime.Parse("25 09 2022 18:00"),
                 Type = teatr,
-                ImagePath = "/Images/1.jpg",
+                ImagePath = "/Images/06.png",
+                Price = 142,
+                PlaceName = "Teatr Capitol"
+            };
+            var imagineDragons1 = new Event
+            {
+                Name = imagineDragons.Name,
+                CityId = poznan.Id,
+                CreationTime = DateTime.Now,
+                Description = imagineDragons.Description,
+                EventTime = DateTime.Parse("12 09 2022 18:00:00"),
+                Type = koncert,
+                ImagePath = "/Images/01.png",
+                Price = 219,
+                PlaceName = "Progresja"
+            };
+            var imagineDragons2 = new Event
+            {
+                Name = imagineDragons.Name,
+                CityId = lublin.Id,
+                CreationTime = DateTime.Now,
+                Description = imagineDragons.Description,
+                EventTime = DateTime.Parse("12 08 2022 17:00:00"),
+                Type = koncert,
+                ImagePath = "/Images/01.png",
+                Price = 229,
+                PlaceName = "Progresja"
             };
 
             modelBuilder.Entity<Event>()
-                .HasData(imagineDragons, arcticMonkeys, alibi, kota, psa);
+                .HasData(imagineDragons, deanLewis, alibi, kota, pentatonix, imagineDragons1, imagineDragons2);
 
             //var tickets_ID = new List<Ticket>();
             //for (int i = 0; i < 20; i++)
